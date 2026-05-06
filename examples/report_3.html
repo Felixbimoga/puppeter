@@ -1,0 +1,3064 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <title>Invoice Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fff;
+      color: #4a4a4a;
+    }
+
+    #slide1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide1 .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 0px !important;
+    }
+
+    #slide1 .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    #slide1 .logo img {
+      height: 100px;
+      margin-right: 10px;
+    }
+
+    #slide1 .header-text {
+      text-align: right;
+    }
+
+    #slide1 .header-text h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    #slide1 .header-text p {
+      margin: 5px 0 0 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    #slide1 .main-image {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      flex-shrink: 0;
+    }
+
+    #slide1 .main-image img {
+      max-width: 90%;
+      max-height: 60vh;
+      height: auto;
+    }
+
+    #slide1 .footer-up,
+    #slide1 .footer {
+      font-size: 12px;
+      color: #999;
+    }
+
+    #slide1 .footer {
+      text-align: center;
+      border-top: 2px solid red;
+      padding: 5px 0;
+      flex-shrink: 0;
+    }
+
+    #slide1 .footer-up {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    #slide1 .footer a {
+      color: #999;
+      text-decoration: none;
+    }
+
+
+
+
+
+
+    #slide2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide2 table th {
+      text-align: center;
+      padding: 4px;
+      border-bottom: 2px solid #D1DBE4;
+      background-color: #f0f4f8;
+    }
+
+    #slide2 .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      gap: 20px;
+    }
+
+    #slide2 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide2 .content {
+      display: flex;
+      gap: 20px;
+      flex: 1 1 auto;
+    }
+
+    #slide2 .left,
+    #slide2 .right {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      min-width: 0;
+      max-height: 100%;
+    }
+
+    #slide2 .left {
+      flex: 1 1 50%;
+      overflow: auto;
+    }
+
+    #slide2 .left img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    #slide2 table {
+      width: 100%;
+      height: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      border: 1px solid #D1DBE4;
+      opacity: 1;
+    }
+
+    #slide2 table th,
+    #slide2 table td {
+      padding: 3px 4px;
+      text-align: right;
+      border: none;
+    }
+
+    #slide2 table td {
+      padding: 3px 4px;
+      border-bottom: 1px solid #D1DBE4;
+    }
+
+    #slide2 table td:last-child {
+      text-align: right;
+      font-weight: bold;
+      padding: 3px 4px;
+    }
+
+    #slide2 table td:first-child {
+      text-align: left;
+    }
+
+
+    #slide2 .right {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #slide2 .right h2 {
+      margin: 0 0 10px 0;
+    }
+
+    #slide2 .right-img {
+      width: 100%;
+      height: auto;
+    }
+
+    #slide2 .right-text {
+      flex: 1;
+      overflow: auto;
+    }
+
+    #slide2 .right ul {
+      list-style-type: none;
+      padding-left: 0;
+      flex: 1;
+      overflow: auto;
+    }
+
+    #slide2 .right li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+      font-size: clamp(14px, 1.2vw, 18px);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    #slide2 .right li,
+    #slide2 .right li ul {
+      font-size: 16px;
+    }
+
+    #slide2 {
+      overflow: hidden;
+    }
+
+    #slide2 .right li::before {
+      content: "▾";
+      position: absolute;
+      left: 0;
+      color: #666;
+    }
+
+    #slide2 .right li ul {
+      padding-left: 20px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    #slide2 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide2 .table-title {
+      text-align: center;
+      background: #808080;
+      color: #fff;
+      font-weight: bold;
+      padding: none;
+    }
+
+    #slide2 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    #slide2 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide2 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+
+
+
+
+    #slide3 {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 20px 40px;
+      box-sizing: border-box;
+    }
+
+    #slide3 .container {
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto;
+      flex: 1 1 auto;
+      gap: 20px;
+    }
+
+    #slide3 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide3 .highlights {
+      display: grid;
+      grid-template-columns: 800px 1fr;
+      grid-auto-rows: auto;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 20px;
+    }
+
+    #slide3 .top-left-image img {
+      width: 700px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    #slide3 .top-left-image {
+      grid-column: 1 / 2;
+      justify-self: start;
+    }
+
+    #slide3 .inventory-box {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    #slide3 .inventory-box h3 {
+      font-size: 20px;
+    }
+
+    #slide3 .inventory-box ul {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    #slide3 .bottom-highlights {
+      grid-column: 1 / span 2;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: nowrap;
+    }
+
+    #slide3 .highlight-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      flex: 1 1 30%;
+    }
+
+    #slide3 .highlight-box i {
+      font-size: 32px;
+      color: #666;
+    }
+
+    #slide3 .highlight-box h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    #slide3 .highlight-box ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    #slide3 .highlight-box ul ul {
+      list-style-type: circle;
+      padding-left: 20px;
+      margin: 5px 0;
+    }
+
+    #slide3 .center-image {
+      grid-column: 1 / span 2;
+      justify-self: center;
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+
+    #slide3 .center-image img {
+      width: 500px;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #slide3 .line.h {
+      height: 2px;
+      width: 50px;
+    }
+
+    #slide3 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide3 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    #slide3 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide3 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      #slide3 .highlights {
+        grid-template-columns: 1fr;
+      }
+
+      #slide3 .bottom-highlights {
+        flex-direction: column;
+      }
+
+      #slide3 .highlight-box {
+        flex: 1 1 100%;
+      }
+
+      #slide3 .top-left-image img {
+        width: 100%;
+      }
+    }
+
+
+
+
+
+
+    #slide4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide4 .container {
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto;
+      flex: 1 1 auto;
+      gap: 20px;
+    }
+
+    #slide4 .top-image {
+      width: 100%;
+      height: 35%;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    #slide4 .top-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #slide4 header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    #slide4 .red-bar {
+      width: 6px;
+      height: 40px;
+      background-color: #D32F2F;
+      margin-right: 15px;
+    }
+
+    #slide4 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide4 .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      flex: 1;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #slide4 .column {
+      background: #fff;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 100%;
+      border: 1px solid #D1DBE4;
+      padding: 10px 15px 0 15px;
+    }
+
+    #slide4 .column .data-row {
+      width: 100%;
+    }
+
+    #slide4 .column:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+
+    #slide4 .icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    #slide4 h2 {
+      font-size: clamp(14px, 1.2vw, 22px);
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    #slide4 .data-row {
+      display: flex;
+      width: 100%;
+      margin-bottom: 8px;
+      font-size: clamp(10px, 1vw, 13px);
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    #slide4 .data-row span {
+      color: #777;
+      text-align: left;
+      flex: 1;
+    }
+
+    #slide4 .data-row strong {
+      color: #222;
+      font-weight: 800;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    #slide4 .right-column,
+    #slide4 .center,
+    #slide4 .right {
+      display: block !important;
+    }
+
+    #slide4 .column>div:not(.icon):not(h2) {
+      width: 100%;
+    }
+
+    #slide4 footer {
+      border-top: 2px solid red;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: #888;
+      flex-shrink: 0;
+      bottom: 20px;
+    }
+
+    #slide4 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #slide4 .logo-m {
+      background-color: #444;
+      color: white;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    /* @media (max-width: 900px) {
+      #slide4 .container {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+        box-shadow: none;
+      }
+
+      #slide4 .grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      #slide4 .icon {
+        margin-bottom: 10px;
+      }
+
+      #slide4 h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      #slide4 .data-row {
+        flex-direction: column;
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+      #slide4 .data-row span,
+      #slide4 .data-row strong {
+        text-align: left;
+        margin: 0;
+        flex: none;
+      }
+
+      #slide4 footer {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+      }
+    } */
+
+
+    #slide5 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide5 .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      gap: 20px;
+    }
+
+    #slide5 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide5 .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    #slide5 table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    #slide5 thead th {
+      background-color: #A7A9AC;
+      color: white;
+      padding: 8px 2px;
+      font-weight: 600;
+      border: 1px solid #fff;
+    }
+
+    #slide5 tbody td {
+      padding: 6px 2px;
+      border: 0.5px solid #E6E7E8;
+      color: #333;
+    }
+
+    #slide5 .row-green {
+      background-color: #D9EAD3;
+    }
+
+    #slide5 .row-yellow {
+      background-color: #FFF2CC;
+    }
+
+    #slide5 .row-blue {
+      background-color: #CFE2F3;
+    }
+
+    #slide5 .status-pending {
+      color: #D32F2F;
+      font-weight: bold;
+    }
+
+    #slide5 .status-off {
+      color: #1976D2;
+      font-weight: bold;
+    }
+
+    #slide5 .price-mo {
+      color: #38761D;
+      font-weight: bold;
+    }
+
+    #slide5 .price-value {
+      color: #38761D;
+      font-weight: bold;
+    }
+
+    #slide5 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide5 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    #slide5 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide5 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+
+
+
+
+    #slide6 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide6 .container {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      gap: 20px;
+    }
+
+    #slide6 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide6 .table-container {
+      width: 100%;
+    }
+
+    #slide6 table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      color: #333;
+    }
+
+    #slide6 thead th {
+      background-color: #A7A9AC;
+      color: white;
+      padding: 6px 4px;
+      font-weight: 600;
+      border: 1px solid #fff;
+      text-align: center;
+    }
+
+    #slide6 tbody tr {
+      background-color: #E7F1E6;
+      border-bottom: 1px solid #fff;
+    }
+
+    #slide6 tbody tr.highlight {
+      background-color: #E6E7E8;
+    }
+
+    #slide6 tbody td {
+      padding: 6px 4px;
+      text-align: center;
+      border: 1px solid #fff;
+    }
+
+    #slide6 .price {
+      color: #2E7D32;
+      font-weight: 600;
+    }
+
+    #slide6 .price-sold {
+      color: #2E7D32;
+      font-weight: 700;
+    }
+
+    #slide6 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide6 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    #slide6 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide6 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    #slide6 .footer-right {
+      font-size: 14px;
+    }
+
+
+
+
+
+
+    #slide7 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide7 .slide {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      gap: 20px;
+    }
+
+    #slide7 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide7 .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 15px;
+      flex: 1 1 auto;
+      height: 100%;
+      overflow: auto;
+      margin-bottom: 20px;
+    }
+
+    #slide7 .chart-box {
+      border: 1px solid #D1D3D4;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #slide7 h2 {
+      font-size: clamp(12px, 1.2vw, 16px);
+      color: #444;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    #slide7 h2 span {
+      display: block;
+      color: #888;
+      font-weight: 400;
+    }
+
+    #slide7 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide7 footer {
+      border-top: 2px solid red;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6D6E71;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    #slide7 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide7 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+
+
+
+
+
+    #slide8 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide8 .slide {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      color: white;
+    }
+
+    #slide8 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    #slide8 .comps-container {
+      background: #6D6E71;
+      display: flex;
+      padding: 10px;
+    }
+
+    #slide8 .comps-wrapper {
+      background: #6D6E71;
+      flex: 1 1 auto;
+      overflow: auto;
+      max-height: calc(100% - 100px);
+    }
+
+    #slide8 .comps-title {
+      background: #3A3A3C;
+      color: #fff;
+      padding: 8px 115px;
+      font-weight: bold;
+    }
+
+    #slide8 .comps-container {
+      display: flex;
+      flex: 1 1 auto;
+      max-height: 70vh;
+      overflow: auto;
+      padding: 10px;
+      background: #6D6E71;
+    }
+
+    #slide8 .sidebar {
+      width: 220px;
+    }
+
+    #slide8 .aircraft-model {
+      position: absolute;
+      top: 105px;
+      left: 180px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    #slide8 .row-label {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 15px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    #slide8 .comp-column {
+      flex: 1;
+      margin: 0 5px;
+      border: 2px solid #BD1622;
+      background: #F1F1F2;
+      color: #333;
+    }
+
+    #slide8 .comp-header,
+    #slide8 .data-group {
+      text-align: center;
+      font-size: clamp(10px, 1vw, 13px);
+    }
+
+    #slide8 .comp-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background: white;
+      text-align: center;
+      font-size: 10px;
+      padding: 5px 0;
+    }
+
+    #slide8 .data-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      height: 40px;
+      border-bottom: 1px dashed black;
+      align-items: center;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    #slide8 .data-group.highlight {
+      font-size: clamp(12px, 1.2vw, 15px);
+    }
+
+    #slide8 .pos {
+      color: #2E7D32;
+      font-weight: bold;
+    }
+
+    #slide8 .neg {
+      color: #D32F2F;
+      font-weight: bold;
+    }
+
+    #slide8 .comp-footer {
+      background: #D1D3D4;
+      border-top: 3px solid red;
+    }
+
+    #slide8 .total-val {
+      height: 30px;
+      display: flex;
+      align-items: end;
+      justify-content: end;
+    }
+
+    #slide8 .average-bar {
+      background: white;
+      color: #333;
+      padding: 15px;
+      font-weight: 800;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    #slide8 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide8 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    #slide8 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide8 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+
+
+
+
+
+
+    #slide9 {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide9 .slide-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #slide9 .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 0px !important;
+    }
+
+    #slide9 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide9 .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    #slide9 .logo img {
+      height: 100px;
+      margin-right: 10px;
+    }
+
+    #slide9 .circle-logo {
+      background-color: #58595b;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 25px;
+    }
+
+    #slide9 .main-title {
+      flex: 1;
+      font-size: 50px;
+      font-weight: 300;
+      color: #a7a9ac;
+      letter-spacing: 1px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-50px);
+    }
+
+    #slide9 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide9 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    #slide9 .footer-line {
+      width: 100%;
+      height: 2px;
+      background-color: red;
+      margin-bottom: 15px;
+    }
+
+    #slide9 .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      color: #58595b;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    #slide9 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide9 .footer-mini-logo {
+      background-color: #58595b;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    #slide9 .footer-tagline {
+      font-weight: 600;
+    }
+
+    #slide9 .trademark-small {
+      font-size: 8px;
+      vertical-align: super;
+    }
+
+    #slide9 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+
+
+
+
+
+
+
+    #slide10 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide10 .slide {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #slide10 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide10 .content-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-grow: 1;
+      height: auto;
+    }
+
+    #slide10 .data-column {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 15px;
+      max-height: 850px;
+    }
+
+    #slide10 .image-column {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-height: 850px;
+    }
+
+    #slide10 .section-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+
+    #slide10 .section-title h2 {
+      font-size: 20px;
+      color: #3a3a3c;
+      font-weight: 700;
+    }
+
+    #slide10 .sub-price {
+      margin-left: 50px;
+    }
+
+    #slide10 .icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    #slide10 ul {
+      list-style: none;
+      margin-left: 35px;
+    }
+
+    #slide10 ul li {
+      font-size: 18px;
+      color: #6d6e71;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    #slide10 ul li::before {
+      content: "•";
+      position: absolute;
+      left: -25px;
+      font-weight: 600;
+      font-size: 25px;
+      bottom: -5px;
+    }
+
+    #slide10 .image-box {
+      flex: 1;
+      max-height: 300px;
+      width: 100%;
+      background-color: #e6e7e8;
+      overflow: hidden;
+      display: flex;
+    }
+
+    #slide10 .image-box img {
+      width: 100%;
+      height: 100%;
+    }
+
+    #slide10 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide10 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    #slide10 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide10 .logo-m {
+      background: transparent url("image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+
+
+
+
+    #slide11 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide11 .slide-container {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      gap: 20px;
+    }
+
+    #slide11 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide11 .main-title {
+      font-size: 80px;
+      font-weight: 300;
+      color: #a7a9ac;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    #slide11 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide11 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    #slide11 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide11 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+
+
+
+
+
+
+
+    #slide12 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px 40px;
+    }
+
+    #slide12 .slide {
+      background-color: white;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      gap: 20px;
+    }
+
+    #slide12 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide12 h2 {
+      font-size: 20px;
+      color: #3a3a3c;
+      font-weight: 800;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    #slide12 .main-list {
+      list-style: none;
+      margin-bottom: 0px;
+    }
+
+    #slide12 .main-list li {
+      font-size: 18px;
+      color: #58595b;
+      margin-bottom: 5px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    #slide12 .main-list li::before {
+      content: "•";
+      color: #58595b;
+      position: absolute;
+      left: 0;
+    }
+
+    #slide12 .platforms-grid,
+    #slide12 .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding-left: 7%;
+    }
+
+    #slide12 .platforms-grid ul {
+      list-style: none;
+      padding-left: 40px;
+    }
+
+    #slide12 .platforms-grid li {
+      font-size: 18px;
+      color: #58595b;
+      margin-bottom: 2px;
+      position: relative;
+    }
+
+    #slide12 .platforms-grid li::before {
+      content: "-";
+      position: absolute;
+      left: -18px;
+      font-size: 30px;
+      bottom: -5px;
+    }
+
+    #slide12 .approach-section {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      width: 95%;
+    }
+
+    #slide12 .image-right img {
+      width: 400px;
+    }
+
+    #slide12 .results-section {
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      border-top: 2px dashed #D1DBE4;
+    }
+
+    #slide12 .image-left img {
+      width: 350px;
+      align-self: center;
+    }
+
+    #slide12 .stats-grid h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #3a3a3c;
+      margin-bottom: 10px;
+    }
+
+    #slide12 .stat-col ul {
+      list-style: none;
+    }
+
+    #slide12 .stat-col li {
+      font-size: 17px;
+      color: #58595b;
+      margin-bottom: 5px;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    #slide12 .stat-col li::before {
+      content: "-";
+      position: absolute;
+      left: 0px;
+      font-size: 30px;
+      top: -10px;
+    }
+
+    #slide12 .footer {
+      border-top: 2px solid red;
+      padding: 5px 0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #slide12 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: auto;
+      margin-bottom: 15px;
+    }
+
+    #slide12 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide12 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+
+
+
+
+
+
+    #slide13 {
+      width: 1200px;
+      height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding-top: 20px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    #slide13 .slide {
+      background-image: url('{{slide13Base64}}');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: #f6f6f6;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #slide13 header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-left: 40px;
+    }
+
+    #slide13 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    #slide13 .timeline-container {
+      position: relative;
+      width: 100%;
+      margin-top: 80px;
+      margin-bottom: 10px;
+      min-height: 340px;
+      height: auto;
+      flex-shrink: 0;
+
+    }
+
+    #slide13 .timeline-container::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-top: 2px dotted #58595b;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    #slide13 .start-logo {
+      background-image: url('{{logoSmBase64}}');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1040;
+    }
+
+    #slide13 .milestone {
+      height: 173px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+      border-left: 2px solid rgb(44, 47, 49);
+    }
+
+    #slide13 .red-dot {
+      position: absolute;
+      bottom: -5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      background: #ff3b48;
+      border-radius: 0;
+      border-radius: 50%;
+      z-index: 4;
+      box-shadow: 0 0 0 2px rgba(189, 22, 34, 0.15);
+    }
+
+    #slide13 .label.top {
+      position: absolute;
+      bottom: 58%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1f2a36;
+      line-height: 1.4;
+      padding-bottom: 18px;
+      word-break: break-word;
+      pointer-events: none;
+    }
+
+    #slide13 .label.top.offset {
+      bottom: 68%;
+    }
+
+    #slide13 .date-label {
+      position: absolute;
+      bottom: -30%;
+      transform: translateX(-50%) rotate(-45deg);
+      font-size: 12px;
+      font-weight: 400;
+      color: #000000;
+      white-space: nowrap;
+      padding: 2px 6px;
+      letter-spacing: 0.3px;
+      border-radius: 2px;
+      backdrop-filter: blur(2px);
+    }
+
+    #slide13 .end-aircraft {
+      position: absolute;
+      right: 10px;
+      top: 49%;
+      transform: translateY(-50%);
+      width: 100px;
+      max-width: 25vw;
+      min-width: 90px;
+      z-index: 20;
+      filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.1));
+    }
+
+    #slide13 .info-box {
+      margin: 30px auto 40px auto;
+      width: 90%;
+      max-width: 1000px;
+      border: 2px solid #f83f4b;
+      background: white;
+      backdrop-filter: blur(3px);
+      text-align: center;
+      border-radius: 2px;
+    }
+
+    #slide13 .info-box p {
+      font-size: clamp(14px, 2.5vw, 16px);
+      color: #2b2b2b;
+      line-height: 1.6;
+      font-weight: 450;
+    }
+
+    #slide13 .main-logo-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    #slide13 .circle-logo {
+      background: transparent url('{{logoSmBase64}}') 0% 0% no-repeat padding-box;
+      position: relative;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 25px;
+      flex-shrink: 0;
+      position: relative;
+      margin-left: 3%;
+    }
+
+    #slide13 .m-letter {
+      color: white;
+      font-size: 68px;
+      font-weight: 700;
+      position: relative;
+      line-height: 1;
+    }
+
+    #slide13 .m-letter::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 14px solid #be1e2d;
+      z-index: 5;
+    }
+
+    #slide13 .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #slide13 .brand-name {
+      font-size: clamp(28px, 8vw, 24px);
+      font-weight: 700;
+      color: #58595b;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    #slide13 .trademark {
+      font-size: 0.25em;
+      vertical-align: super;
+      font-weight: 400;
+      margin-left: 5px;
+    }
+
+    #slide13 .brand-sub {
+      font-size: clamp(15px, 4vw, 10px);
+      font-weight: 700;
+      color: #58595b;
+      letter-spacing: 12px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      line-height: 1.2;
+    }
+
+    @media screen and (max-width: 900px) {
+      #slide13 .slide {
+        padding: 20px 20px 30px;
+        min-height: auto;
+      }
+
+      #slide13 .timeline-container {
+        min-height: 320px;
+      }
+
+      #slide13 .label.top {
+        width: 120px;
+        font-size: 11px;
+        bottom: 62%;
+      }
+
+      #slide13 .date-label {
+        font-size: 10px;
+        top: 62%;
+      }
+
+      #slide13 .circle-logo {
+        width: 90px;
+        height: 90px;
+      }
+
+      #slide13 .m-letter {
+        font-size: 54px;
+      }
+
+      #slide13 .m-letter::before {
+        top: 12px;
+        border-top-width: 12px;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      #slide13 .timeline-container {
+        min-height: 360px;
+      }
+
+      #slide13 .label.top {
+        width: 100px;
+        font-size: 10px;
+        bottom: 70%;
+        border-left: 1px solid #aaa;
+        padding-bottom: 10px;
+      }
+
+      #slide13 .date-label {
+        font-size: 9px;
+        top: 70%;
+        rotate: -40deg;
+      }
+
+      #slide13 .label.top.offset {
+        bottom: 78%;
+      }
+
+      #slide13 .info-box {
+        padding: 15px 18px;
+      }
+
+      #slide13 .brand-sub {
+        letter-spacing: 8px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      #slide13 header {
+        margin-bottom: 15px;
+      }
+
+      #slide13 .red-accent {
+        height: 40px;
+        width: 5px;
+      }
+
+      #slide13 h1 {
+        font-size: 30px;
+      }
+
+      #slide13 .timeline-container {
+        margin-top: 5px;
+        min-height: 400px;
+      }
+
+      #slide13 .label.top {
+        width: 85px;
+        font-size: 9px;
+        bottom: 72%;
+        border-left-width: 1px;
+        padding-bottom: 8px;
+      }
+
+      #slide13 .date-label {
+        font-size: 8px;
+        top: 72%;
+        rotate: -35deg;
+        padding: 2px;
+      }
+
+      #slide13 .main-logo-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #slide13 .circle-logo {
+        margin-bottom: 15px;
+        width: 80px;
+        height: 80px;
+      }
+
+      #slide13 .m-letter {
+        font-size: 48px;
+      }
+    }
+
+
+
+
+
+
+
+    #slide14 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 96vh;
+      box-sizing: border-box;
+      padding: 10px 30px;
+      page-break-after: always;
+      overflow: hidden;
+    }
+
+    #slide14 .slide {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #slide14 .my-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      height: calc(100% - 60px);
+    }
+
+    #slide14 .my-col-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-top: 10px;
+    }
+
+    #slide14 header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-left: 80px;
+    }
+
+    #slide14 .red-accent {
+      width: 7px;
+      height: 52px;
+      background: #fc2937;
+      margin-right: 20px;
+    }
+
+    #slide14 h1 {
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #d7001c;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    #slide14 .text-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 30px;
+    }
+
+    #slide14 .content-container {
+      background: url("./image/slide14.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: #f6f6f6;
+      position: relative;
+    }
+
+    #slide14 .professional-list {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    #slide14 .professional-list p {
+      font-size: 16px;
+      color: #3a3a3c;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1;
+    }
+
+    #slide14 .tagline {
+      font-size: 20px;
+      font-weight: 400;
+      color: #ff3948;
+      text-align: right;
+    }
+
+    #slide14 .image-column {
+      width: 50%;
+      height: 100%;
+    }
+
+    #slide14 .image-column img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+    }
+
+    #slide14 footer {
+      border-top: 2px solid #ff5858;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6d6e71;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    #slide14 .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    #slide14 .logo-m {
+      background: transparent url("./image/logo-sm.png") 0% 0% no-repeat padding-box;
+      background-position: center, center;
+      background-size: cover, cover;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* * {
+  outline: 1px solid red;
+} */
+
+    section {
+      page-break-before: always;
+    }
+
+    section * {
+      page-break-inside: avoid;
+    }
+
+    section {
+      max-height: 1120px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="report-section" id="slide1">
+    <div class="header">
+      <div class="logo">
+        <img src="{{logoBase64}}" alt="Logo Mente Group" width="230px" height="auto">
+      </div>
+      <div class="header-text">
+        <h1>Market Overview<br>Make Model</h1>
+        <p>Prepared for: Client Name</p>
+      </div>
+    </div>
+
+    <div class="main-image">
+      <img src="{{slide1Base64}}" alt="Avion">
+    </div>
+
+    <div class="footer-up">
+      <div>CONFIDENTIAL. For Client use only.<br>©2026 MENTE Group, LLC. All Rights Reserved.</div>
+      <div>Month XX, 2026</div>
+    </div>
+
+    <div class="footer">
+      mentegroup.com <img src="{{sloganBase64}}" alt="Logo Mente Group" width="30" height="30"> More Than Brokers ™
+    </div>
+  </section>
+
+  <section id="slide2">
+    <div class="container">
+      <h1>Make Model Market Summary</h1>
+      <div class="content">
+        <div class="left">
+          <table>
+            <tr>
+              <th colspan="2" class="table-title">Market Stats</th>
+            </tr>
+            <tr>
+              <td>Total For Sale / % of Fleet</td>
+              <td>49 / 8.1%</td>
+            </tr>
+            <tr>
+              <td>Total For Lease / % of Listed</td>
+              <td>0 / 0.0%</td>
+            </tr>
+            <tr>
+              <td>Sale Pending / % of For Sale</td>
+              <td>10 / 20.4%</td>
+            </tr>
+            <tr>
+              <td>Current Fleet Size</td>
+              <td>607</td>
+            </tr>
+            <tr>
+              <td>DOM - Average/Median</td>
+              <td>147 / 106</td>
+            </tr>
+            <tr>
+              <td>Asking Price Range (Low/High)</td>
+              <td>$12.75 / $38.00</td>
+            </tr>
+            <tr>
+              <td>ASK - Average/Median</td>
+              <td>$22.36 / $22.90</td>
+            </tr>
+            <tr>
+              <td>Expected - Average/Median</td>
+              <td>$20.88 / $20.00</td>
+            </tr>
+            <tr>
+              <td>Estimated Total Value For Sale</td>
+              <td>$1,095,575,147</td>
+            </tr>
+            <tr>
+              <td>Absorption Rate Months/%</td>
+              <td>10 / 9.9%</td>
+            </tr>
+            <tr>
+              <td>Average Year Model On Market</td>
+              <td>2010</td>
+            </tr>
+            <tr>
+              <td>Airframe Time - Average/Median</td>
+              <td>4,661 / 4,091</td>
+            </tr>
+            <tr>
+              <td>Production Year Range</td>
+              <td>2003 to 2022</td>
+            </tr>
+            <tr>
+              <td># Sold 90 Days</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td># Added 90 Days</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td># Sold 180 Days</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <td># Added 180 Days</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td># Sold 1 Year</td>
+              <td>58</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="right">
+          <img src="{{slide2Base64}}" alt="Aircraft" class="right-img" width="50px" height="50px">
+          <div class="right-text">
+            <h2>Highlights</h2>
+            <ul>
+              <li>Make Model inventory has grown by XX% in the preceding 12 months.</li>
+              <li>In the same period, average Make Model asking prices have declined by XX%.</li>
+              <li>There are XX Make Model’s for sale (X.X% of fleet):
+                <ul>
+                  <li>XX available - XX on market, XX off market</li>
+                  <li>XX sale pending - XX on market, XX off market</li>
+                  <li>XX are available for a lease/share sale only</li>
+                  <li>XX are not seriously for sale</li>
+                  <li>Asking prices range from $XX.XXM to $XX.XXM</li>
+                </ul>
+              </li>
+              <li>There have been XX Make Model sales in the previous 90 days:
+                <ul>
+                  <li>XX sales were on market, XX sales off market</li>
+                  <li>Sale prices ranged from $XX.XXM to $XX.XXM</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-left">STRICTLY CONFIDENTIAL</div>
+        <div class="footer-center">
+          mentegroup.com <span class="logo-m"
+            style="background-image: url('{{logoSmBase64}}');background-repeat: no-repeat;background-position: center;background-size: contain;"></span>
+          More Than Brokers ™
+        </div>
+        <div class="footer-right">2</div>
+      </footer>
+    </div>
+  </section>
+
+  <section id="slide5">
+    <div class="container">
+      <h1>Make Model Market</h1>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>s/n</th>
+              <th>Model</th>
+              <th>EIS</th>
+              <th>Cont.</th>
+              <th>Base</th>
+              <th>Reg</th>
+              <th>Status</th>
+              <th>Date Listed</th>
+              <th>DOM</th>
+              <th>Ask</th>
+              <th>Expected</th>
+              <th>AFTT</th>
+              <th>Cycles</th>
+              <th>Eng Prog</th>
+              <th>PAX</th>
+              <th>AFT Config</th>
+              <th>I/Age</th>
+              <th>E/Age</th>
+              <th>2C Due</th>
+              <th>Winglets</th>
+              <th>CPDLC</th>
+              <th>HUD</th>
+              <th>EVS</th>
+              <th>SVS</th>
+              <th>EASy II</th>
+              <th>ATG HSD</th>
+              <th>SAT HSD</th>
+              <th>CMS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-green">
+              <td>601</td>
+              <td>900DX</td>
+              <td>2005</td>
+              <td>ME</td>
+              <td>UAE</td>
+              <td>A6</td>
+              <td class="status-pending">Sale Pending</td>
+              <td>11/12/24</td>
+              <td>156</td>
+              <td class="price-mo">M/O</td>
+              <td class="price-value">$11.300M</td>
+              <td>6,500</td>
+              <td></td>
+              <td>MSP-G</td>
+              <td>13</td>
+              <td>Div/Cred</td>
+              <td>2005</td>
+              <td>2017</td>
+              <td>Jan-29</td>
+              <td>-</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>-</td>
+              <td>-</td>
+              <td>✓</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class="row-yellow">
+              <td>608</td>
+              <td>900DX</td>
+              <td>2006</td>
+              <td>NA</td>
+              <td>US, WY</td>
+              <td>N</td>
+              <td>On Market</td>
+              <td>12/02/24</td>
+              <td>136</td>
+              <td class="price-value">$12.500M</td>
+              <td class="price-value">$11.500M</td>
+              <td>4,821</td>
+              <td>2,961</td>
+              <td>MSP</td>
+              <td>14</td>
+              <td>Div/Div</td>
+              <td>2006</td>
+              <td>2011</td>
+              <td>Feb-29</td>
+              <td>-</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>-</td>
+              <td>-</td>
+              <td>✓</td>
+              <td>ATG-4000</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class="row-yellow">
+              <td>157</td>
+              <td>900EXy</td>
+              <td>2005</td>
+              <td>NA</td>
+              <td>US, WA</td>
+              <td>N</td>
+              <td>On Market</td>
+              <td>01/17/25</td>
+              <td>90</td>
+              <td class="price-value">$15.850M</td>
+              <td class="price-value">$14.750M</td>
+              <td>7,340</td>
+              <td>3,812</td>
+              <td>MSP-G</td>
+              <td>15</td>
+              <td>Div/Div</td>
+              <td>2018</td>
+              <td>2023</td>
+              <td>Dec-29</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>✓</td>
+              <td>L5 Avance</td>
+              <td>-</td>
+              <td>Ovation</td>
+            </tr>
+            <tr class="row-blue">
+              <td>166</td>
+              <td>900EXy</td>
+              <td>2006</td>
+              <td>ME</td>
+              <td>Dubai</td>
+              <td>T7</td>
+              <td class="status-off">Off Market</td>
+              <td>07/13/23</td>
+              <td>644</td>
+              <td class="price-value">$13.500M</td>
+              <td class="price-value">$13.000M</td>
+              <td>8,557</td>
+              <td>6,238</td>
+              <td>MSP-G</td>
+              <td>14</td>
+              <td>Div/Div</td>
+              <td>2012</td>
+              <td>2019</td>
+              <td>Nov-30</td>
+              <td>-</td>
+              <td>✓</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>✓</td>
+              <td>-</td>
+              <td>SBB</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer>
+        <div class="footer-left">STRICTLY CONFIDENTIAL</div>
+        <div class="footer-center">
+          mentegroup.com <span class="logo-m"
+            style="background-image: url('{{logoSmBase64}}');background-repeat: no-repeat;background-position: center;background-size: contain;"></span>
+          More Than Brokers ™
+        </div>
+        <div class="footer-right">5</div>
+      </footer>
+    </div>
+  </section>
+
+  <section id="slide6">
+    <div class="container">
+      <h1>Make Model Recently Sold</h1>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>s/n</th>
+              <th>EIS</th>
+              <th>Cont.</th>
+              <th>Base</th>
+              <th>Reg</th>
+              <th>Status</th>
+              <th>Date Sold</th>
+              <th>DOM</th>
+              <th>Ask</th>
+              <th>Sold</th>
+              <th>AFTT</th>
+              <th>Cycles</th>
+              <th>Eng Prog</th>
+              <th>PAX</th>
+              <th>AFT Conf</th>
+              <th>I/Age</th>
+              <th>E/Age</th>
+              <th>8C Due</th>
+              <th>WAAS/LPV</th>
+              <th>A/T</th>
+              <th>HSD/ATG</th>
+              <th>HSD/SAT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>34</strong></td>
+              <td>2001</td>
+              <td>NA</td>
+              <td>US, FL</td>
+              <td>N</td>
+              <td>Sold</td>
+              <td>02/20/26</td>
+              <td>109</td>
+              <td class="price">$3.850M</td>
+              <td class="price-sold">$3.600M</td>
+              <td>7,572</td>
+              <td>4,098</td>
+              <td>ESP-G</td>
+              <td>10</td>
+              <td>Div/Conf</td>
+              <td>2024</td>
+              <td>2024</td>
+              <td>2033</td>
+              <td>-</td>
+              <td>-</td>
+              <td>L5 Avance</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>107</strong></td>
+              <td>2005</td>
+              <td>NA</td>
+              <td>US, NJ</td>
+              <td>N</td>
+              <td>Sold</td>
+              <td>01/26/26</td>
+              <td>224</td>
+              <td class="price">$5.000M</td>
+              <td class="price-sold">$4.500M</td>
+              <td>4,135</td>
+              <td>2,280</td>
+              <td>ESP-G</td>
+              <td>9</td>
+              <td>Div/Club</td>
+              <td>2005</td>
+              <td>2015</td>
+              <td>2033</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>ATG-5000</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>83</strong></td>
+              <td>2003</td>
+              <td>NA</td>
+              <td>US, TX</td>
+              <td>N</td>
+              <td>Sold</td>
+              <td>01/06/26</td>
+              <td>56</td>
+              <td class="price">$3.750M</td>
+              <td class="price-sold">$3.150M</td>
+              <td>8,749</td>
+              <td>5,647</td>
+              <td>ESP</td>
+              <td>9</td>
+              <td>Div/Club</td>
+              <td>2021</td>
+              <td>2003</td>
+              <td>2026</td>
+              <td>-</td>
+              <td>-</td>
+              <td>ATG-5000</td>
+              <td>-</td>
+            </tr>
+            <tr class="highlight">
+              <td><strong>183</strong></td>
+              <td>2008</td>
+              <td>NA</td>
+              <td>US, TX</td>
+              <td>N</td>
+              <td>Sold</td>
+              <td>01/02/26</td>
+              <td>0</td>
+              <td class="price">M/O</td>
+              <td class="price-sold">$6.300M</td>
+              <td>2,916</td>
+              <td>2,050</td>
+              <td>ESP-G</td>
+              <td>10</td>
+              <td>Conf/Club</td>
+              <td>2017</td>
+              <td>2008</td>
+              <td>2032</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>210</strong></td>
+              <td>2008</td>
+              <td>NA</td>
+              <td>US, KS</td>
+              <td>N</td>
+              <td>Sold</td>
+              <td>12/31/25</td>
+              <td>86</td>
+              <td class="price">$6.795M</td>
+              <td class="price-sold">$6.100M</td>
+              <td>1,646</td>
+              <td>983</td>
+              <td>ESP-G</td>
+              <td>9</td>
+              <td>Div/Club</td>
+              <td>2024</td>
+              <td>2024</td>
+              <td>2032</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>L3 Avance</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>131</strong></td>
+              <td>2006</td>
+              <td>NA</td>
+              <td>US, FL</td>
+              <td>N</td>
+              <td>Sold</td>
+              <td>12/16/25</td>
+              <td>643</td>
+              <td class="price">M/O</td>
+              <td>-</td>
+              <td>8,087</td>
+              <td>4,985</td>
+              <td>ESP-S-L</td>
+              <td>9</td>
+              <td>Div/Club</td>
+              <td>2006</td>
+              <td>2016</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>ATG-5000</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>136</strong></td>
+              <td>2006</td>
+              <td>NA</td>
+              <td>US, TX</td>
+              <td>N</td>
+              <td>Sold</td>
+              <td>12/16/25</td>
+              <td>130</td>
+              <td class="price">M/O</td>
+              <td class="price-sold">$4.000M</td>
+              <td>8,449</td>
+              <td>5,417</td>
+              <td>ESP-G</td>
+              <td>9</td>
+              <td>Div/Club</td>
+              <td>2021</td>
+              <td>2019</td>
+              <td>2030</td>
+              <td>-</td>
+              <td>-</td>
+              <td>L5 Avance</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer>
+        <div class="footer-left">STRICTLY CONFIDENTIAL</div>
+        <div class="footer-center">
+          mentegroup.com <span class="logo-m"
+            style="background-image: url('{{logoSmBase64}}');background-repeat: no-repeat;background-position: center;background-size: contain;"></span>
+          More Than Brokers ™
+        </div>
+        <div class="footer-right">6</div>
+      </footer>
+    </div>
+  </section>
+
+  <section id="slide7">
+    <div class="slide">
+      <h1>Make Model Market Stats</h1>
+
+      <div class="charts-grid">
+        <div class="chart-box">
+          <h2>Supply by DOM <span>Current Market</span></h2>
+          <img src="{{chartDOMBase64}}" style="max-width:100%; height:auto;" />
+        </div>
+
+        <div class="chart-box">
+          <h2>Supply-to-Transactions <span>Trailing 24 Months</span></h2>
+          <img src="{{chartDOMBase64}}" style="max-width:100%; height:auto;" />
+        </div>
+
+        <div class="chart-box">
+          <h2>Supply and High-Low-Average Ask Price <span>Current Market</span></h2>
+          <img src="{{chartDOMBase64}}" style="max-width:100%; height:auto;" />
+        </div>
+
+        <div class="chart-box">
+          <h2>Supply to Average Price <span>Trailing 24 Months</span></h2>
+          <img src="{{chartDOMBase64}}" style="max-width:100%; height:auto;" />
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-left">STRICTLY CONFIDENTIAL</div>
+        <div class="footer-center">
+          mentegroup.com <span class="logo-m"
+            style="background-image: url('{{logoSmBase64}}');background-repeat: no-repeat;background-position: center;background-size: contain;"></span>
+          More Than Brokers ™
+        </div>
+        <div class="footer-right">7</div>
+      </footer>
+    </div>
+  </section>
+
+  <section id="slide9">
+    <div class="slide-container">
+      <div class="header">
+        <div class="logo">
+          <img src="{{logoBase64}}" alt="Logo Mente Group" width="230px" height="auto">
+        </div>
+      </div>
+
+      <div class="main-title">
+        Marketing Plan
+      </div>
+
+      <footer>
+        <div class="footer-left">STRICTLY CONFIDENTIAL</div>
+        <div class="footer-center">
+          mentegroup.com <span class="logo-m"
+            style="background-image: url('{{logoSmBase64}}');background-repeat: no-repeat;background-position: center;background-size: contain;"></span>
+          More Than Brokers ™
+        </div>
+        <div class="footer-right">9</div>
+      </footer>
+    </div>
+  </section>
+
+  <section id="slide10">
+    <div class="slide">
+      <h1>Make Model SN <span style="font-weight: 600;">XX</span></h1>
+
+      <div class="content-container" style="padding-bottom: 40px; padding-left: 5%; width: 95%;">
+        <div class="data-column">
+          <div class="info-group">
+            <div class="section-title">
+              <img src="{{searchSlide10Base64}}" class="icon" alt="highlights">
+              <h2>Highlights</h2>
+            </div>
+            <ul>
+              <li>Year Model:</li>
+              <li>AFTT:</li>
+              <li>Cycles:</li>
+              <li><span style="font-weight: 600;">XX</span> registered, based in <span
+                  style="font-weight: 600;">XX</span></li>
+              <li><span style="font-weight: 600;">XX</span> configuration</li>
+            </ul>
+          </div>
+
+          <div class="info-group price-section">
+            <div class="section-title">
+              <img src="{{dollarSignSlide10Base64}}" class="icon" alt="price" style="position: relative;top: 10px;">
+              <h2 style="margin-bottom: 0px;">Ask Price: $XX.XXM</h2>
+            </div>
+            <div class="section-title sub-price">
+              <h2 style="margin-top: 0px;">Ask Price: $XX.XXM</h2>
+            </div>
+          </div>
+
+
+          <div class="info-group">
+            <div class="section-title">
+              <img src="{{checkSlide10Base64}}" class="icon" alt="pros">
+              <h2>Pros</h2>
+            </div>
+            <ul>
+              <li>Enrolled on <span style="font-weight: 600;">XX</span></li>
+              <li>Equipped with <span style="font-weight: 600;">XX</span></li>
+              <li>Equipped with <span style="font-weight: 600;">XX</span></li>
+            </ul>
+          </div>
+
+          <div class="info-group">
+            <div class="section-title">
+              <img src="{{stockSlide10Base64}}" class="icon" alt="challenges">
+              <h2>Challenges</h2>
+            </div>
+            <ul>
+              <li>Not Equipped with <span style="font-weight: 600;">XX</span></li>
+              <li>Original Cosmetics</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="image-column">
+          <div class="image-box exterior">
+            <img src="{{slide10_1Base64}}" alt="Aircraft Exterior">
+          </div>
+          <div class="image-box interior">
+            <img src="{{slide10_2Base64}}" alt="Aircraft Interior">
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-left">STRICTLY CONFIDENTIAL</div>
+        <div class="footer-center">
+          mentegroup.com <span class="logo-m"
+            style="background-image: url('{{logoSmBase64}}');background-repeat: no-repeat;background-position: center;background-size: contain;"></span>
+          More Than Brokers ™
+        </div>
+        <div class="footer-right">10</div>
+      </footer>
+    </div>
+  </section>
+
+  <section id="slide11">
+    <div class="slide-container">
+      <h1>Make Model SN XX</h1>
+
+      <div class="main-title">
+
+      </div>
+
+      <footer>
+        <div class="footer-left">STRICTLY CONFIDENTIAL</div>
+        <div class="footer-center">
+          mentegroup.com <span class="logo-m"
+            style="background-image: url('{{logoSmBase64}}');background-repeat: no-repeat;background-position: center;background-size: contain;"></span>
+          More Than Brokers ™
+        </div>
+        <div class="footer-right">11</div>
+      </footer>
+    </div>
+  </section>
+
+  <section id="slide14">
+    <div class="slide">
+      <div class="my-row">
+        <div class="my-col-6">
+          <h1>More than Brokers</h1>
+          <div class="text-column">
+            <div class="professional-list">
+              <p>PARTNERS</p>
+              <p>ADVISORS</p>
+              <p>APPRAISERS</p>
+              <p>CONSULTANTS</p>
+              <p>BROKERS</p>
+              <p>TECHNICIANS</p>
+              <p>ANALYSTS</p>
+              <p>RECRUITERS</p>
+              <p>OPERATORS</p>
+              <p>EXPERTS</p>
+            </div>
+            <div class="tagline">
+              MENTE GROUP...GET MORE.
+            </div>
+          </div>
+        </div>
+        <div class="content-container my-col-6"
+          style="background-image: url('{{slide14Base64}}');background-repeat: no-repeat;background-position: center;background-size: cover;">
+          <div class="image-column">
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-left">STRICTLY CONFIDENTIAL</div>
+        <div class="footer-center">
+          mentegroup.com <span class="logo-m"
+            style="background-image: url('{{logoSmBase64}}');background-repeat: no-repeat;background-position: center;background-size: contain;"></span>
+          More Than Brokers ™
+        </div>
+        <div class="footer-right">14</div>
+      </footer>
+    </div>
+  </section>
+
+</body>
+
+</html>
